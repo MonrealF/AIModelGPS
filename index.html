@@ -1,30 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>AIMODEL</title>
+    <title>IA</title>
 </head>
-<body id="body">
-    <header id="header">
-        IAMODEL
-    </header>
-    <main id="main">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat blanditiis temporibus saepe sequi odio! Error veniam sunt commodi sint et nostrum dignissimos quia officia earum qui? Error quas sint veritatis!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quaerat dolorum, porro quod repellat a animi asperiores recusandae mollitia perferendis? Minima impedit dolor deserunt molestias aut explicabo quisquam, quasi maxime.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum assumenda sit temporibus adipisci sequi quasi inventore possimus atque enim soluta, ipsum similique esse commodi officia eveniet accusantium ipsa quae maxime!
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum debitis nostrum doloremque tempora culpa deserunt, magni commodi amet ipsa, dolorem voluptatum voluptate dolores perferendis molestias magnam incidunt fugiat pariatur! Iusto!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est vel similique, corporis enim rerum ipsum aliquam quia quidem repudiandae nesciunt eum fuga. Ullam, facere consequatur! Consequatur omnis qui tempore facere.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt deserunt atque odit et eius animi cupiditate laboriosam corporis nostrum, dicta enim odio! Eum, delectus iste incidunt quae voluptatum asperiores excepturi.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore optio nostrum rem ducimus commodi nobis laudantium nam nisi natus asperiores repellendus blanditiis eum quis architecto officia praesentium, excepturi exercitationem atque.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, doloribus natus aperiam, quos corporis corrupti libero debitis earum sunt suscipit, deserunt hic totam! Sapiente id ea cum optio maxime nam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque excepturi, tempora quae reiciendis ex expedita rerum assumenda, magnam voluptas asperiores saepe placeat provident nemo praesentium autem labore deleniti doloribus voluptatem.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo beatae, nesciunt nulla corporis fuga ratione id unde vel reprehenderit fugit eos rerum tempora earum iusto exercitationem. Atque doloribus in quibusdam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deleniti, itaque minus quidem impedit tenetur saepe quas unde aliquid hic sunt aspernatur ad. Eos quae magni molestias. Perferendis, perspiciatis velit.
-    </main>
-    <footer id="footer">
-        @@@@@
-    </footer>
+<body>
+    <div class="background" id="login-screen">
+        <div class="login-container">
+            <h2>Bienvenido!</h2>
+            <p>Inicia Sesión o crea una cuenta</p>
+            <div class="input-container">
+                <img src="747376.png" alt="Icono usuario">
+                <input type="text" placeholder="Usuario">
+            </div>
+            <div class="input-container">
+                <img src="3064197.png" alt="Icono contraseña">
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <button onclick="toggleVisibility()">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- pantalla de reconocedor de imágenes -->
+    <div class="image-recognition-screen" id="image-recognition-screen" style="display: none;">
+        <div class="recognition-container">
+            <input type="file" id="file-input" style="display: none;">
+            <div class="button-container">
+                <div class="image-container">
+                    <img src="599a47ccdf138a20d267beac679864c1.jpg" alt="Comida" onclick="openFileBrowser()">
+                    <p>COMIDA</p>
+                </div>
+                <div class="image-container">
+                    <img src="images.png" alt="Objeto" onclick="openFileBrowser()">
+                    <p>OBJETO</p>
+                </div>
+                <div class="image-container">
+                    <img src="istockphoto-1461439018-612x612.jpg" alt="Animales" onclick="openFileBrowser()">
+                    <p>ANIMALES</p>
+                </div>
+                <div class="image-container">
+                    <img src="gratis-png-iconos-de-la-computadora-reconocimiento-de-iris-sistema-de-reconocimiento-facial-icono-de-diseno-reconocimiento-de-rostro.png" alt="Personas" onclick="openFileBrowser()">
+                    <p>PERSONAS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
