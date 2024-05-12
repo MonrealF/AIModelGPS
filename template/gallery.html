@@ -21,7 +21,7 @@
             <div class="row row-cols-4">
                 {% for image in images %}
                     <div class="col margin">
-                        <img class="img-fluid" src="uploads\WhatsApp Image 2024-04-22 at 7.04.19 PM.jpeg" alt="{{ image.nombre }}">
+                        <img class="img-fluid" src="https://th.bing.com/th/id/OIP.Kg6AyaeYj2PbrMI2DBb3cQHaE8?rs=1&pid=ImgDetMain" alt="{{ image.nombre }}">
                         <form action="{{ url_for('delete_image', idImagen=image.idImagen) }}" method="post">
                             <div class="btn-group margin" role="group" aria-label="Basic mixed styles example">
                                 <button class="btn btn-outline-danger" type="submit">Eliminar</button>
