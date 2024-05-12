@@ -1,0 +1,70 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IA</title>
+</head>
+<body>
+    <div class="background" id="login-screen">
+        <div class="login-container">
+            <h2>Bienvenido!</h2>
+            <p>Inicia Sesión o crea una cuenta</p>
+            <div class="input-container">
+                <img src="747376.png" alt="Icono usuario">
+                <input type="text" placeholder="Usuario">
+            </div>
+            <div class="input-container">
+                <img src="3064197.png" alt="Icono contraseña">
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <button onclick="toggleVisibility()">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- pantalla de reconocedor de imágenes -->
+    <div class="image-recognition-screen" id="image-recognition-screen" style="display: none;">
+        <div class="recognition-container">
+            <input type="file" id="file-input" style="display: none;">
+            <!-- <div class="button-container">
+                <div class="image-container">
+                    <img src="599a47ccdf138a20d267beac679864c1.jpg" alt="Comida" onclick="openFileBrowser()">
+                    <p>COMIDA</p>
+                </div>
+                <div class="image-container">
+                    <img src="images.png" alt="Objeto" onclick="openFileBrowser()">
+                    <p>OBJETO</p>
+                </div>
+                <div class="image-container">
+                    <img src="istockphoto-1461439018-612x612.jpg" alt="Animales" onclick="openFileBrowser()">
+                    <p>ANIMALES</p>
+                </div>
+            -->
+                <div class="image-container">
+                    <img src="gratis-png-iconos-de-la-computadora-reconocimiento-de-iris-sistema-de-reconocimiento-facial-icono-de-diseno-reconocimiento-de-rostro.png" alt="Comida" onclick="openFileBrowser()">
+                    <p>PERSONAS</p>
+                </div>
+              <!-- <div class="person-screen" id="person-screen" style="display: none;">
+                    <div class="recognition-container">
+                        <h2>Ingresa tu sexo</h2>
+                        <div class="button-container">
+                            <div class="image-container">
+                                <img src="3439380.png" alt="Masculino" onclick="openFileBrowser()">
+                                <p>Masculino</p>
+                            </div>
+                            <div class="image-container">
+                                <img src="png-clipart-female-woman-search-people-logo.png" alt="Femenino" onclick="openFileBrowser()">
+                                <p>Femenino</p>
+                            </div>
+                        </div>
+                        <button onclick="goBack()">Regresar</button>
+                    </div>
+                    --> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

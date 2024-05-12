@@ -1,0 +1,135 @@
+:root {
+    --backgroundBlur: rgba(255, 255, 255, 0.8); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.background {
+    background-image: url('https://f5b623aa.rocketcdn.me/wp-content/uploads/2022/05/Blog_What-is-AI-Image-Recognition-1.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 50px;
+}
+
+.image-recognition-screen {
+    background-image: url('https://media.licdn.com/dms/image/C4E12AQFzr6_B3l5zOg/article-cover_image-shrink_720_1280/0/1590531403488?e=2147483647&v=beta&t=qh_5N4oi9bk2RizjSuGjWZGyx7F_9pTN134pditrypQ');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.login-container, .recognition-container {
+    background: var(--backgroundBlur);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-container img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.input-container input {
+    width: calc(100% - 34px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button, .button-container img {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color:cadetblue; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.button-container p {
+    margin-top: 5px;
+    background: none; 
+    color: black; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 50px; 
+}
+
+.image-container {
+    text-align: center;
+    flex: 1;
+    padding: 10px; 
+    
+}
+
+.button-container img { 
+    height: 50px; 
+   
+}
+
+.recognition-container {
+    padding: 20px;
+    border-radius: 10px;
+    width: auto; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.person-screen {
+    background-image: url('https://as1.ftcdn.net/v2/jpg/01/59/76/46/1000_F_159764616_5BC7zmubyJR53JBTpT0DczN1EkWzttQp.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* Oculto inicialmente */
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    
+}
+
+
+
