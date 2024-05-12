@@ -33,18 +33,7 @@ def before_request():
 @app.route('/')
 @login_required
 def index():
-    cur = mysql.connection.cursor()
-
-    cur.execute('SELECT * FROM imagen WHERE usuarioidUsuario = %s', (session['idUsuario'],))
-    images = cur.fetchall()
-    cur.close()
-
-    if not images:
-        # Si no hay imágenes, renderiza una plantilla vacía o muestra un mensaje indicando que no hay imágenes.
-        return render_template('index.html')  # Puedes crear una plantilla específica para este caso si lo prefieres.
-
-    return render_template('index.html', images=images)
-
+    return render_template('index.html')
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
@@ -68,6 +57,21 @@ def login():
             return render_template('login.html', mensaje="Usuario o Contraseña Incorrectas")
     return render_template('login.html')
 
+@app.route('/gallery')
+@login_required
+def gallery():
+    cur = mysql.connection.cursor()
+
+    cur.execute('SELECT * FROM imagen WHERE usuarioidUsuario = %s', (session['idUsuario'],))
+    images = cur.fetchall()
+    cur.close()
+
+    if not images:
+        # Si no hay imágenes, renderiza una plantilla vacía o muestra un mensaje indicando que no hay imágenes.
+        return render_template('gallery.html')  # Puedes crear una plantilla específica para este caso si lo prefieres.
+
+    return render_template('gallery.html', images=images)
+
 @app.route('/upload', methods=['POST'])
 @login_required  # Solo usuarios autenticados pueden subir imágenes
 def upload_file():
@@ -90,7 +94,7 @@ def upload_file():
         mysql.connection.commit()
         cur.close()
 
-    return redirect(url_for('index'))
+    return redirect(url_for('gallery'))
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
@@ -104,7 +108,7 @@ def delete_image(idImagen):
     cur.execute("DELETE FROM imagen WHERE idImagen = %s", (idImagen,))
     mysql.connection.commit()
     cur.close()
-    return redirect(url_for('index'))
+    return redirect(url_for('gallery'))
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True, use_reloader=False)
